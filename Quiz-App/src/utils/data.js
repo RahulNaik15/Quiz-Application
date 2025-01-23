@@ -411,7 +411,7 @@ export const quizes = [
 
 {
     quizId: "nodejs123",
-    title: "Node.js Development Quiz",
+    title: "Node.js Quiz",
     description: "A quiz to test your knowledge on Node.js.",
     category: "Programming",
     language: "en",
@@ -717,5 +717,212 @@ export const quizes = [
       }
     ],
   },
+
+
+  {
+    quizId: "mongodb123",
+    title: "MongoDB Quiz",
+    description: "A quiz to test your MongoDB knowledge.",
+    category: "Database",
+    image: "/images/mongodb.svg",
+    language: "en",
+    tags: ["mongodb", "database", "NoSQL"],
+    questions: [
+        {
+            questionId: "q1",
+            question: "What type of database is MongoDB?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "NoSQL", explanation: "Correct. MongoDB is a NoSQL database." },
+                { optionId: "b", answer: "Relational", explanation: "This is incorrect. MongoDB is a NoSQL, not a relational database." },
+                { optionId: "c", answer: "Key-Value", explanation: "This is incorrect. MongoDB is not a key-value store." },
+                { optionId: "d", answer: "Document-based", explanation: "This is correct, MongoDB is document-based but is categorized under NoSQL." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! MongoDB is a NoSQL database.",
+                incorrect: "Oops! The correct answer is 'NoSQL'."
+            },
+            hint: "MongoDB is designed to handle large-scale, distributed, and unstructured data.",
+            difficulty: "easy"
+        },
+        {
+            questionId: "q2",
+            question: "Which of the following is the default port for MongoDB?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "27017", explanation: "Correct. The default port for MongoDB is 27017." },
+                { optionId: "b", answer: "3306", explanation: "This is incorrect. Port 3306 is used for MySQL." },
+                { optionId: "c", answer: "5432", explanation: "This is incorrect. Port 5432 is used for PostgreSQL." },
+                { optionId: "d", answer: "8080", explanation: "This is incorrect. Port 8080 is commonly used for web servers." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! The default port for MongoDB is 27017.",
+                incorrect: "Oops! The correct answer is '27017'."
+            },
+            hint: "Check the default port MongoDB uses for connections.",
+            difficulty: "easy"
+        },
+        {
+            questionId: "q3",
+            question: "Which MongoDB operation is used to insert a document into a collection?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "insertOne()", explanation: "Correct. 'insertOne()' is used to insert a single document into a collection." },
+                { optionId: "b", answer: "add()", explanation: "This is incorrect. 'add()' is not a MongoDB operation." },
+                { optionId: "c", answer: "insertMany()", explanation: "This is incorrect. 'insertMany()' is used for inserting multiple documents, not a single one." },
+                { optionId: "d", answer: "create()", explanation: "This is incorrect. 'create()' is not a valid MongoDB operation." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! 'insertOne()' is used to insert a single document into a collection.",
+                incorrect: "Oops! The correct answer is 'insertOne()'."
+            },
+            hint: "Look for the method that inserts a single document into the collection.",
+            difficulty: "medium"
+        },
+        {
+            questionId: "q4",
+            question: "Which method is used to retrieve data from a MongoDB collection?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "find()", explanation: "Correct. 'find()' is used to retrieve data from a MongoDB collection." },
+                { optionId: "b", answer: "select()", explanation: "This is incorrect. 'select()' is not a MongoDB method." },
+                { optionId: "c", answer: "get()", explanation: "This is incorrect. 'get()' is not used in MongoDB to retrieve data." },
+                { optionId: "d", answer: "retrieve()", explanation: "This is incorrect. 'retrieve()' is not a MongoDB method." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! 'find()' is used to retrieve data from a MongoDB collection.",
+                incorrect: "Oops! The correct answer is 'find()'."
+            },
+            hint: "Look for the method that retrieves documents from a collection.",
+            difficulty: "medium"
+        },
+        {
+            questionId: "q5",
+            question: "Which operator is used to specify a condition in MongoDB queries?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "$eq", explanation: "Correct. The '$eq' operator is used to specify a condition for equality." },
+                { optionId: "b", answer: "$gt", explanation: "This is incorrect. '$gt' is used for greater than condition." },
+                { optionId: "c", answer: "$lt", explanation: "This is incorrect. '$lt' is used for less than condition." },
+                { optionId: "d", answer: "$ne", explanation: "This is incorrect. '$ne' is used for 'not equal' condition." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! The '$eq' operator specifies equality condition in MongoDB queries.",
+                incorrect: "Oops! The correct answer is '$eq'."
+            },
+            hint: "Look for the operator used for equality in MongoDB queries.",
+            difficulty: "hard"
+        },
+    ],
+},
+
+  
+{
+    quizId: "html123",
+    title: "HTML Quiz",
+    description: "A quiz to test your HTML knowledge.",
+    category: "Web Development",
+    image: "/images/html5.svg",
+    language: "en",
+    tags: ["html", "web development", "coding"],
+    questions: [
+        {
+            questionId: "q1",
+            question: "What does HTML stand for?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "Hyper Text Markup Language", explanation: "Correct. HTML stands for Hyper Text Markup Language." },
+                { optionId: "b", answer: "Home Tool Markup Language", explanation: "This is incorrect. HTML stands for Hyper Text Markup Language." },
+                { optionId: "c", answer: "Hyperlinks and Text Markup Language", explanation: "This is incorrect. The correct answer is 'Hyper Text Markup Language.'" },
+                { optionId: "d", answer: "Hyper Text Making Language", explanation: "This is incorrect. HTML stands for Hyper Text Markup Language." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! HTML stands for Hyper Text Markup Language.",
+                incorrect: "Oops! The correct answer is 'Hyper Text Markup Language'."
+            },
+            hint: "Think of the core purpose of HTML in web development.",
+            difficulty: "easy"
+        },
+        {
+            questionId: "q2",
+            question: "Which of the following is the correct syntax to link an external CSS file to an HTML document?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "<link rel='stylesheet' href='styles.css'>", explanation: "Correct. This is the proper way to link a CSS file to an HTML document." },
+                { optionId: "b", answer: "<link href='styles.css' rel='stylesheet'>", explanation: "This is incorrect. The order of attributes should be 'rel' first, then 'href'." },
+                { optionId: "c", answer: "<style src='styles.css'>", explanation: "This is incorrect. 'style' is used to define internal CSS, not link to external CSS." },
+                { optionId: "d", answer: "<css link='styles.css'>", explanation: "This is incorrect. 'css' is not a valid HTML tag." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! '<link rel='stylesheet' href='styles.css'>' is the correct way to link an external CSS file.",
+                incorrect: "Oops! The correct answer is '<link rel='stylesheet' href='styles.css'>'"
+            },
+            hint: "Look for the tag that links external resources in HTML.",
+            difficulty: "medium"
+        },
+        {
+            questionId: "q3",
+            question: "Which tag is used to define an ordered list in HTML?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "<ol>", explanation: "Correct. The '<ol>' tag is used to define an ordered list." },
+                { optionId: "b", answer: "<ul>", explanation: "This is incorrect. The '<ul>' tag is used for unordered lists." },
+                { optionId: "c", answer: "<list>", explanation: "This is incorrect. '<list>' is not a valid HTML tag." },
+                { optionId: "d", answer: "<li>", explanation: "This is incorrect. The '<li>' tag is used for list items, not for the list itself." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! '<ol>' is used to define an ordered list in HTML.",
+                incorrect: "Oops! The correct answer is '<ol>'."
+            },
+            hint: "Think about the tag used for numbering items in a list.",
+            difficulty: "easy"
+        },
+        {
+            questionId: "q4",
+            question: "Which HTML tag is used to define a hyperlink?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "<a>", explanation: "Correct. The '<a>' tag is used to define a hyperlink." },
+                { optionId: "b", answer: "<link>", explanation: "This is incorrect. '<link>' is used for linking external resources like CSS." },
+                { optionId: "c", answer: "<url>", explanation: "This is incorrect. '<url>' is not a valid HTML tag." },
+                { optionId: "d", answer: "<hyperlink>", explanation: "This is incorrect. '<hyperlink>' is not a valid HTML tag." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! The '<a>' tag is used to define a hyperlink.",
+                incorrect: "Oops! The correct answer is '<a>'."
+            },
+            hint: "This tag is used to link to other pages or resources.",
+            difficulty: "medium"
+        },
+        {
+            questionId: "q5",
+            question: "Which of the following is the correct HTML element for the largest heading?",
+            questionType: "multiple-choice",
+            options: [
+                { optionId: "a", answer: "<h1>", explanation: "Correct. The '<h1>' tag is used for the largest heading in HTML." },
+                { optionId: "b", answer: "<heading>", explanation: "This is incorrect. '<heading>' is not a valid HTML tag." },
+                { optionId: "c", answer: "<h6>", explanation: "This is incorrect. '<h6>' is used for the smallest heading." },
+                { optionId: "d", answer: "<head>", explanation: "This is incorrect. '<head>' is used to contain metadata, not headings." }
+            ],
+            correctAnswer: "a",
+            feedback: {
+                correct: "Correct! The '<h1>' tag defines the largest heading.",
+                incorrect: "Oops! The correct answer is '<h1>'."
+            },
+            hint: "This tag represents the largest heading in HTML.",
+            difficulty: "medium"
+        },
+    ],
+},
+
 
 ];
