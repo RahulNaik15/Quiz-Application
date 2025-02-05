@@ -5,22 +5,28 @@ import { Box, Divider, Modal, Typography  } from '@mui/material';
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import QuestionCard from '../components/QuestionCard';
+import { Link } from 'react-router-dom'
 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "90%",
-  maxWidth: 400,
+  width: "95%", 
+  maxWidth: 500, 
+  height: "60%",  
+  maxHeight: 400, 
   bgcolor: "white",
-  borderRadius: 8, 
-  boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)", 
-  p: 4,
+  borderRadius: 10, 
+  boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
+  p: 5, 
   display: "flex",
   flexDirection: "column",
-  alignItems: "center", 
-  justifyContent: "center", 
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 2, 
+  background: "linear-gradient(135deg, #f8fafc, #e2e8f0)", 
+  textAlign: "center",
 };
 
 const QuizPage = () => {
@@ -82,7 +88,7 @@ const QuizPage = () => {
           );
         })}
       </div>
-      <div className="flex justify-center py-4 sm:py-8">
+      <div className="flex  justify-center items-center gap-5 py-4 sm:py-8">
         <Button
           variant="contained"
           color="success"
@@ -92,23 +98,55 @@ const QuizPage = () => {
           Submit
         </Button>
 
+        <Link to="/">
+          <Button
+          variant="contained"
+
+          className="w-36"
+          >
+            Home
+          </Button>
+          </Link>
+
         <Modal
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2" className='font-bold text-xl sm:text-2xl text-[#14192c] '>
-              Quiz Result
-            </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Marks : {marks * 2} / 10
-            </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Result : {getResultStatus(marks)}
-            </Typography>
-          </Box>
+              <Box sx={style}>
+                <Typography
+                  variant="h4" // Increased font size
+                  sx={{ fontWeight: "bold", color: "#14192c", mb: 3 }}
+                >
+                  Quiz Result
+                </Typography>
+                
+                <Typography
+                  sx={{ fontSize: "20px", fontWeight: "600", color: "#374151" }}
+                >
+                  Marks: <span style={{ color: "#10b981", fontWeight: "bold" }}>{marks * 2} / 10</span>
+                </Typography>
+
+                <Typography
+                  sx={{
+                    fontSize: "20px", 
+                    fontWeight: "600",
+                    color: getResultStatus(marks) === "Fail" ? "#dc2626" : "#2563eb",
+                  }}
+                >
+                  Result: {getResultStatus(marks)}
+                </Typography>
+
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ mt: 4, width: "120px", height: "45px", fontSize: "16px", borderRadius: "8px", textTransform: "none" }}
+                  onClick={handleClose}
+                >
+                  Close
+                </Button>
+              </Box>
         </Modal>
       </div>
     </div>
